@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B6C4487A233D5F4700048669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C44879233D5F4700048669 /* AppDelegate.swift */; };
-		B6C4487C233D5F4700048669 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4487B233D5F4700048669 /* MasterViewController.swift */; };
+		B6C4487C233D5F4700048669 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4487B233D5F4700048669 /* MenuViewController.swift */; };
 		B6C44881233D5F4700048669 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C4487F233D5F4700048669 /* Main.storyboard */; };
 		B6C44883233D5F4A00048669 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C44882233D5F4A00048669 /* Assets.xcassets */; };
 		B6C44886233D5F4A00048669 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C44884233D5F4A00048669 /* LaunchScreen.storyboard */; };
@@ -21,6 +21,9 @@
 		B6C448BE233D617C00048669 /* .ruby-version in Resources */ = {isa = PBXBuildFile; fileRef = B6C448BD233D617C00048669 /* .ruby-version */; };
 		B6C448C0233D61A200048669 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = B6C448BF233D61A200048669 /* .gitignore */; };
 		B6C448C3233D629C00048669 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = B6C448C2233D629C00048669 /* .swiftlint.yml */; };
+		B6C448CA233D671800048669 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448C9233D671800048669 /* MenuTableViewCell.swift */; };
+		B6C448CC233D673D00048669 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448CB233D673D00048669 /* MenuItem.swift */; };
+		B6C448CE233D6BE800048669 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448CD233D6BE800048669 /* UIColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +49,7 @@
 		87E293492EDED2D7C32931FC /* libPods-Gint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gint.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C44876233D5F4700048669 /* Gint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C44879233D5F4700048669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6C4487B233D5F4700048669 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		B6C4487B233D5F4700048669 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B6C44880233D5F4700048669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6C44882233D5F4A00048669 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6C44885233D5F4A00048669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -64,6 +67,9 @@
 		B6C448BD233D617C00048669 /* .ruby-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".ruby-version"; sourceTree = "<group>"; };
 		B6C448BF233D61A200048669 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		B6C448C2233D629C00048669 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		B6C448C9233D671800048669 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		B6C448CB233D673D00048669 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		B6C448CD233D6BE800048669 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,11 +132,11 @@
 		B6C44878233D5F4700048669 /* Gint */ = {
 			isa = PBXGroup;
 			children = (
-				B6C44879233D5F4700048669 /* AppDelegate.swift */,
-				B6C4487B233D5F4700048669 /* MasterViewController.swift */,
-				B6C4487F233D5F4700048669 /* Main.storyboard */,
+				B6C448C7233D661900048669 /* Views */,
+				B6C448C6233D660800048669 /* Controllers */,
+				B6C448C5233D660200048669 /* Models */,
+				B6C448C4233D65EF00048669 /* Extensions */,
 				B6C44882233D5F4A00048669 /* Assets.xcassets */,
-				B6C44884233D5F4A00048669 /* LaunchScreen.storyboard */,
 				B6C44887233D5F4A00048669 /* Info.plist */,
 			);
 			path = Gint;
@@ -166,6 +172,49 @@
 				B6C448B5233D602900048669 /* Podfile.lock */,
 			);
 			name = Configuration;
+			sourceTree = "<group>";
+		};
+		B6C448C4233D65EF00048669 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B6C448CD233D6BE800048669 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B6C448C5233D660200048669 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B6C448CB233D673D00048669 /* MenuItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B6C448C6233D660800048669 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B6C44879233D5F4700048669 /* AppDelegate.swift */,
+				B6C448C8233D663500048669 /* Menu */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B6C448C7233D661900048669 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B6C4487F233D5F4700048669 /* Main.storyboard */,
+				B6C44884233D5F4A00048669 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B6C448C8233D663500048669 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				B6C4487B233D5F4700048669 /* MenuViewController.swift */,
+				B6C448C9233D671800048669 /* MenuTableViewCell.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 		DDF164C3A6305D94D078773B /* Frameworks */ = {
@@ -359,8 +408,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6C4487C233D5F4700048669 /* MasterViewController.swift in Sources */,
+				B6C4487C233D5F4700048669 /* MenuViewController.swift in Sources */,
+				B6C448CC233D673D00048669 /* MenuItem.swift in Sources */,
 				B6C4487A233D5F4700048669 /* AppDelegate.swift in Sources */,
+				B6C448CA233D671800048669 /* MenuTableViewCell.swift in Sources */,
+				B6C448CE233D6BE800048669 /* UIColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
