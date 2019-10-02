@@ -28,10 +28,14 @@ class MenuTableViewCell: UITableViewCell {
     }
     
     private func markAsSelected() {
-        menuItemLabel.textColor = .orange
+        UIView.animate(withDuration: 0.3) {
+            self.menuItemLabel.alpha = 0.5
+        }
     }
     
     private func markAsDeselected() {
-        menuItemLabel.textColor = .white
+        UIView.animate(withDuration: 0.3) {
+            self.menuItemLabel.alpha = 1
+        }
     }
 }

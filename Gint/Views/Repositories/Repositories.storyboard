@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DL6-Al-dN6">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Repositories-->
+        <scene sceneID="gbn-Z1-6ZP">
+            <objects>
+                <viewController id="DL6-Al-dN6" customClass="RepositoriesViewController" customModule="Gint" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vYE-BR-ZEA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jZU-aa-7TS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" name="Main Background"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReposytoryTableViewCellIdentifier" id="Xsq-is-HNs" customClass="RepositoryTableViewCell" customModule="Gint" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xsq-is-HNs" id="R5w-Nw-aWr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Gq-DR-lhR">
+                                                    <rect key="frame" x="36" y="11" width="342" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" name="Main Text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4Gq-DR-lhR" firstAttribute="top" secondItem="R5w-Nw-aWr" secondAttribute="topMargin" id="4SR-BJ-GJs"/>
+                                                <constraint firstItem="4Gq-DR-lhR" firstAttribute="leading" secondItem="R5w-Nw-aWr" secondAttribute="leadingMargin" constant="16" id="fDg-yg-ypG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="4Gq-DR-lhR" secondAttribute="bottom" id="i4f-KB-pbv"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="4Gq-DR-lhR" secondAttribute="trailing" constant="16" id="svA-QU-rSQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="4Gq-DR-lhR" id="elI-vG-PXP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DL6-Al-dN6" id="m3v-Je-mfk"/>
+                                    <outlet property="delegate" destination="DL6-Al-dN6" id="tge-tS-qqw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" name="Brand"/>
+                        <constraints>
+                            <constraint firstItem="jZU-aa-7TS" firstAttribute="leading" secondItem="heV-py-EH7" secondAttribute="leading" id="26y-UC-qyM"/>
+                            <constraint firstItem="heV-py-EH7" firstAttribute="bottom" secondItem="jZU-aa-7TS" secondAttribute="bottom" id="EAq-LF-PS9"/>
+                            <constraint firstItem="jZU-aa-7TS" firstAttribute="top" secondItem="heV-py-EH7" secondAttribute="top" id="Lgl-ri-InS"/>
+                            <constraint firstItem="heV-py-EH7" firstAttribute="trailing" secondItem="jZU-aa-7TS" secondAttribute="trailing" id="TuC-rr-qX6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="heV-py-EH7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Repositories" id="yAJ-2B-5Gw"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="jZU-aa-7TS" id="qDO-rj-K8l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gO5-e1-QlY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Brand">
+            <color red="0.59999999999999998" green="0.0" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Main Background">
+            <color red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Main Text">
+            <color red="1" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

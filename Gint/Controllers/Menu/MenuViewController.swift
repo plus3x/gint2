@@ -12,7 +12,7 @@ class MasterViewController: UIViewController {
     var loggedIn = { return false }
     var selectedCellIndexPath = IndexPath(row: 4, section: 0)
     let menuItems = [
-        MenuItem(name: "Welcome", segue: "ShowWelcome"),
+        MenuItem(name: "Repositories", segue: "ShowRepositories"),
     ]
 }
 

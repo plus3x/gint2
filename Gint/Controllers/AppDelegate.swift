@@ -11,9 +11,15 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    var loggedIn: Bool { return GitHubService.token != nil }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if !loggedIn {
+            showLogin()
+        }
+        
         return true
     }
 
@@ -37,5 +43,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+}
+
+extension AppDelegate: LoginShowHideProtocol {
+    func showLogin() {
+        if let loginViewController = UIStoryboard(name: "Login", bundle: nil).instantiateInitialViewController() as? LoginViewController {
+            loginViewController.delegate = self
+            window!.makeKeyAndVisible()
+            window!.rootViewController?.present(loginViewController, animated: false, completion: nil)
+        }
+    }
+    
+    func hideLogin() {
+        window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }

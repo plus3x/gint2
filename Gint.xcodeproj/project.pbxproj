@@ -24,6 +24,15 @@
 		B6C448CA233D671800048669 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448C9233D671800048669 /* MenuTableViewCell.swift */; };
 		B6C448CC233D673D00048669 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448CB233D673D00048669 /* MenuItem.swift */; };
 		B6C448CE233D6BE800048669 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448CD233D6BE800048669 /* UIColor.swift */; };
+		B6C448D3233D769A00048669 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448D2233D769A00048669 /* User.swift */; };
+		B6C448D7233D789B00048669 /* GitHubSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448D6233D789B00048669 /* GitHubSevice.swift */; };
+		B6C448DC233D7A4900048669 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C448DB233D7A4900048669 /* Login.storyboard */; };
+		B6C448DE233D7C1500048669 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448DD233D7C1500048669 /* LoginViewController.swift */; };
+		B6C448E0233D8DFC00048669 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448DF233D8DFC00048669 /* URLRequest.swift */; };
+		B6C448E32341FCF000048669 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448E22341FCF000048669 /* RepositoriesViewController.swift */; };
+		B6C448E62341FD1D00048669 /* Repositories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C448E52341FD1D00048669 /* Repositories.storyboard */; };
+		B6C448E923421CDF00048669 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448E823421CDF00048669 /* Repository.swift */; };
+		B6C448EC2344BE1A00048669 /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448EB2344BE1A00048669 /* RepositoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +79,15 @@
 		B6C448C9233D671800048669 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		B6C448CB233D673D00048669 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		B6C448CD233D6BE800048669 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		B6C448D2233D769A00048669 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B6C448D6233D789B00048669 /* GitHubSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSevice.swift; sourceTree = "<group>"; };
+		B6C448DB233D7A4900048669 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		B6C448DD233D7C1500048669 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B6C448DF233D8DFC00048669 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
+		B6C448E22341FCF000048669 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		B6C448E52341FD1D00048669 /* Repositories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Repositories.storyboard; sourceTree = "<group>"; };
+		B6C448E823421CDF00048669 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		B6C448EB2344BE1A00048669 /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +150,8 @@
 		B6C44878233D5F4700048669 /* Gint */ = {
 			isa = PBXGroup;
 			children = (
+				B6C448D4233D778E00048669 /* Services */,
+				B6C448CF233D766F00048669 /* Helpers */,
 				B6C448C7233D661900048669 /* Views */,
 				B6C448C6233D660800048669 /* Controllers */,
 				B6C448C5233D660200048669 /* Models */,
@@ -178,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				B6C448CD233D6BE800048669 /* UIColor.swift */,
+				B6C448DF233D8DFC00048669 /* URLRequest.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				B6C448CB233D673D00048669 /* MenuItem.swift */,
+				B6C448D2233D769A00048669 /* User.swift */,
+				B6C448E823421CDF00048669 /* Repository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,7 +217,9 @@
 			isa = PBXGroup;
 			children = (
 				B6C44879233D5F4700048669 /* AppDelegate.swift */,
+				B6C448DA233D79E100048669 /* Login */,
 				B6C448C8233D663500048669 /* Menu */,
+				B6C448E12341FCCD00048669 /* Repositories */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -204,6 +229,8 @@
 			children = (
 				B6C4487F233D5F4700048669 /* Main.storyboard */,
 				B6C44884233D5F4A00048669 /* LaunchScreen.storyboard */,
+				B6C448D8233D79CF00048669 /* Login */,
+				B6C448E42341FD0700048669 /* Repositories */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +242,62 @@
 				B6C448C9233D671800048669 /* MenuTableViewCell.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		B6C448CF233D766F00048669 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B6C448D4233D778E00048669 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B6C448D5233D779700048669 /* GitHub */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B6C448D5233D779700048669 /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				B6C448D6233D789B00048669 /* GitHubSevice.swift */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
+		B6C448D8233D79CF00048669 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B6C448DB233D7A4900048669 /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B6C448DA233D79E100048669 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B6C448DD233D7C1500048669 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		B6C448E12341FCCD00048669 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B6C448E22341FCF000048669 /* RepositoriesViewController.swift */,
+				B6C448EB2344BE1A00048669 /* RepositoryTableViewCell.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B6C448E42341FD0700048669 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B6C448E52341FD1D00048669 /* Repositories.storyboard */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		DDF164C3A6305D94D078773B /* Frameworks */ = {
@@ -295,6 +378,11 @@
 				TargetAttributes = {
 					B6C44875233D5F4700048669 = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					B6C4488B233D5F4A00048669 = {
 						CreatedOnToolsVersion = 10.3;
@@ -341,6 +429,8 @@
 				B6C44881233D5F4700048669 /* Main.storyboard in Resources */,
 				B6C448C0233D61A200048669 /* .gitignore in Resources */,
 				B6C448B9233D602900048669 /* Podfile.lock in Resources */,
+				B6C448E62341FD1D00048669 /* Repositories.storyboard in Resources */,
+				B6C448DC233D7A4900048669 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,8 +501,15 @@
 				B6C4487C233D5F4700048669 /* MenuViewController.swift in Sources */,
 				B6C448CC233D673D00048669 /* MenuItem.swift in Sources */,
 				B6C4487A233D5F4700048669 /* AppDelegate.swift in Sources */,
+				B6C448EC2344BE1A00048669 /* RepositoryTableViewCell.swift in Sources */,
 				B6C448CA233D671800048669 /* MenuTableViewCell.swift in Sources */,
+				B6C448DE233D7C1500048669 /* LoginViewController.swift in Sources */,
+				B6C448E923421CDF00048669 /* Repository.swift in Sources */,
 				B6C448CE233D6BE800048669 /* UIColor.swift in Sources */,
+				B6C448E32341FCF000048669 /* RepositoriesViewController.swift in Sources */,
+				B6C448E0233D8DFC00048669 /* URLRequest.swift in Sources */,
+				B6C448D3233D769A00048669 /* User.swift in Sources */,
+				B6C448D7233D789B00048669 /* GitHubSevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
