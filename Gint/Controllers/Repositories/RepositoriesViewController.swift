@@ -11,37 +11,43 @@ import UIKit
 class RepositoriesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    var service: GitHubRepositoryProvider = GitHubService()
+    var service: GitHubRepositoryProvider = GitHubReposytoryService()
     var repositories = [Repository]()
+    var loading = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        reloadRepositories { repositories in
-            self.repositories = repositories
+        reloadRepositories { [weak self] repositories in
+            guard let self = self else { return }
             
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-            }
+            self.repositories = repositories
+
+            self.tableView.reloadData()
         }
     }
     
     private func reloadRepositories(from offset: Int? = nil, completion: @escaping ([Repository]) -> Void) {
-        service.repositories(offset: offset) { result in
+        loading = true
+        service.repositories(offset: offset) { [weak self] result in
+            guard let self = self else { return }
+            
             switch result {
             case .success(let repositories):
                 completion(repositories)
-            case .failure(_): break // swiftlint:disable:this empty_enum_arguments
+            case .failure: break
             }
+            self.loading = false
         }
     }
     
     private func loadMoreItems() {
-        reloadRepositories(from: repositories.count) { repositories in
-            if repositories.count > 0 {
-                self.repositories.append(contentsOf: repositories)
-                self.tableView.reloadData()
-            }
+        reloadRepositories(from: repositories.count) { [weak self] repositories in
+            guard let self = self else { return }
+            guard repositories.count > 0 else { return }
+            
+            self.repositories.append(contentsOf: repositories)
+            self.tableView.reloadData()
         }
     }
 }

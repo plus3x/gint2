@@ -43,14 +43,14 @@ class LoginViewController: UIViewController {
     private func singIn() {
         guard let token = tokenField.text else { return }
         
-        GitHubService.token = token
+        Environment.GitHub.token = token
         
         delegate?.hideLogin()
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
-            let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+              let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
             return
         }
         
@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
     
     @objc func keyboardWillHide(_ notification: Notification) {
         guard let userInfo = notification.userInfo,
-            let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+              let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
             return
         }
         

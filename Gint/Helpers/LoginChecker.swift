@@ -11,7 +11,7 @@ import UIKit
 class LoginChecker {
     let window: UIWindow?
     
-    private var loggedIn: Bool { return GitHubService.token != nil }
+    private var loggedIn: Bool { return Environment.GitHub.token != nil }
     
     required init(window: UIWindow?) {
         self.window = window

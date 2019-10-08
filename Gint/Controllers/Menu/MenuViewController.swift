@@ -9,11 +9,10 @@
 import UIKit
 
 class MasterViewController: UIViewController {
-    var loggedIn = { return false }
-    var selectedCellIndexPath = IndexPath(row: 4, section: 0)
     let menuItems = [
         MenuItem(name: "Repositories", segue: "ShowRepositories"),
     ]
+    var selectedMenuItem: MenuItem?
 }
 
 extension MasterViewController: UITableViewDelegate, UITableViewDataSource {
@@ -25,7 +24,7 @@ extension MasterViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: MenuTableViewCell.identifier, for: indexPath) as! MenuTableViewCell
         
         var menuItem = menuItems[indexPath.row]
-        menuItem.selected = selectedCellIndexPath == indexPath
+        menuItem.selected = selectedMenuItem == menuItem
         cell.configure(with: menuItem)
         
         return cell
@@ -36,7 +35,7 @@ extension MasterViewController: UITableViewDelegate, UITableViewDataSource {
         
         performSegue(withIdentifier: menuItem.segue, sender: self)
         
-        selectedCellIndexPath = indexPath
+        selectedMenuItem = menuItem
         tableView.reloadData()
     }
 }

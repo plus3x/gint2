@@ -13,11 +13,7 @@ class RepositoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    var repository: Repository?
-    
     func configure(with repository: Repository) {
-        self.repository = repository
-        
         nameLabel.text = repository.name
     }
 }

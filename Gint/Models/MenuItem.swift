@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MenuItem {
+struct MenuItem: Equatable {
     let name: String
     let segue: String
     var selected = false

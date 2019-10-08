@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B64BA412234C98A20063B147 /* LoginChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64BA411234C98A20063B147 /* LoginChecker.swift */; };
+		B64BA414234C9E8E0063B147 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64BA413234C9E8E0063B147 /* GitHubService.swift */; };
+		B64BA416234CA17F0063B147 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B64BA415234CA17F0063B147 /* Environment.swift */; };
 		B6C4487A233D5F4700048669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C44879233D5F4700048669 /* AppDelegate.swift */; };
 		B6C4487C233D5F4700048669 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C4487B233D5F4700048669 /* MenuViewController.swift */; };
 		B6C44881233D5F4700048669 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C4487F233D5F4700048669 /* Main.storyboard */; };
@@ -26,7 +28,7 @@
 		B6C448CC233D673D00048669 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448CB233D673D00048669 /* MenuItem.swift */; };
 		B6C448CE233D6BE800048669 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448CD233D6BE800048669 /* UIColor.swift */; };
 		B6C448D3233D769A00048669 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448D2233D769A00048669 /* User.swift */; };
-		B6C448D7233D789B00048669 /* GitHubSevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448D6233D789B00048669 /* GitHubSevice.swift */; };
+		B6C448D7233D789B00048669 /* GitHubReposytoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448D6233D789B00048669 /* GitHubReposytoryService.swift */; };
 		B6C448DC233D7A4900048669 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C448DB233D7A4900048669 /* Login.storyboard */; };
 		B6C448DE233D7C1500048669 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448DD233D7C1500048669 /* LoginViewController.swift */; };
 		B6C448E0233D8DFC00048669 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C448DF233D8DFC00048669 /* URLRequest.swift */; };
@@ -58,6 +60,8 @@
 		6734E86209C22E528068B8A4 /* Pods-Gint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gint.debug.xcconfig"; path = "Target Support Files/Pods-Gint/Pods-Gint.debug.xcconfig"; sourceTree = "<group>"; };
 		87E293492EDED2D7C32931FC /* libPods-Gint.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Gint.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B64BA411234C98A20063B147 /* LoginChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginChecker.swift; sourceTree = "<group>"; };
+		B64BA413234C9E8E0063B147 /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
+		B64BA415234CA17F0063B147 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		B6C44876233D5F4700048669 /* Gint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C44879233D5F4700048669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C4487B233D5F4700048669 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -82,7 +86,7 @@
 		B6C448CB233D673D00048669 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		B6C448CD233D6BE800048669 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		B6C448D2233D769A00048669 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		B6C448D6233D789B00048669 /* GitHubSevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSevice.swift; sourceTree = "<group>"; };
+		B6C448D6233D789B00048669 /* GitHubReposytoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubReposytoryService.swift; sourceTree = "<group>"; };
 		B6C448DB233D7A4900048669 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B6C448DD233D7C1500048669 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B6C448DF233D8DFC00048669 /* URLRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequest.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 				B6C448CB233D673D00048669 /* MenuItem.swift */,
 				B6C448D2233D769A00048669 /* User.swift */,
 				B6C448E823421CDF00048669 /* Repository.swift */,
+				B64BA415234CA17F0063B147 /* Environment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,7 +270,8 @@
 		B6C448D5233D779700048669 /* GitHub */ = {
 			isa = PBXGroup;
 			children = (
-				B6C448D6233D789B00048669 /* GitHubSevice.swift */,
+				B6C448D6233D789B00048669 /* GitHubReposytoryService.swift */,
+				B64BA413234C9E8E0063B147 /* GitHubService.swift */,
 			);
 			path = GitHub;
 			sourceTree = "<group>";
@@ -505,6 +511,8 @@
 				B6C448CC233D673D00048669 /* MenuItem.swift in Sources */,
 				B6C4487A233D5F4700048669 /* AppDelegate.swift in Sources */,
 				B64BA412234C98A20063B147 /* LoginChecker.swift in Sources */,
+				B64BA416234CA17F0063B147 /* Environment.swift in Sources */,
+				B64BA414234C9E8E0063B147 /* GitHubService.swift in Sources */,
 				B6C448EC2344BE1A00048669 /* RepositoryTableViewCell.swift in Sources */,
 				B6C448CA233D671800048669 /* MenuTableViewCell.swift in Sources */,
 				B6C448DE233D7C1500048669 /* LoginViewController.swift in Sources */,
@@ -513,7 +521,7 @@
 				B6C448E32341FCF000048669 /* RepositoriesViewController.swift in Sources */,
 				B6C448E0233D8DFC00048669 /* URLRequest.swift in Sources */,
 				B6C448D3233D769A00048669 /* User.swift in Sources */,
-				B6C448D7233D789B00048669 /* GitHubSevice.swift in Sources */,
+				B6C448D7233D789B00048669 /* GitHubReposytoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

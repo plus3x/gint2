@@ -13,29 +13,15 @@ class MenuTableViewCell: UITableViewCell {
     
     @IBOutlet weak var menuItemLabel: UILabel!
     
-    var menuItem: MenuItem!
-    
     func configure(with menuItem: MenuItem) {
-        self.menuItem = menuItem
-        
         menuItemLabel.text = menuItem.name
         
-        if menuItem.selected {
-            markAsSelected()
-        } else {
-            markAsDeselected()
-        }
+        mark(as: menuItem.selected)
     }
     
-    private func markAsSelected() {
+    private func mark(as selected: Bool) {
         UIView.animate(withDuration: 0.3) {
-            self.menuItemLabel.alpha = 0.5
-        }
-    }
-    
-    private func markAsDeselected() {
-        UIView.animate(withDuration: 0.3) {
-            self.menuItemLabel.alpha = 1
+            self.menuItemLabel.alpha = selected ? 0.5 : 1
         }
     }
 }
