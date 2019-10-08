@@ -56,10 +56,12 @@ extension RepositoriesViewController: UITableViewDelegate, UITableViewDataSource
         
         cell.configure(with: repositories[indexPath.row])
         
-        if indexPath.row == repositories.count - 3 {
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == repositories.count - 1 {
             loadMoreItems()
         }
-        
-        return cell
     }
 }

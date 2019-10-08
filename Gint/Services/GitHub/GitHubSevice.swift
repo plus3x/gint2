@@ -40,15 +40,15 @@ class GitHubService: GitHubSeviceProtocol {
             UserDefaults.standard.synchronize()
         }
     }
-    internal let apiURL = "https://api.github.com"
-    internal let repositoriesPath = "/user/repos"
-    internal var session: URLSession {
+    let apiURL = "https://api.github.com"
+    let repositoriesPath = "/user/repos"
+    var session: URLSession {
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
         return session
     }
     
-    internal func request(_ path: String, method: URLRequest.HTTPMethod = .get, body: Data? = nil, completion: @escaping (Result<Data, FailrureResult>) -> Void) {
+    func request(_ path: String, method: URLRequest.HTTPMethod = .get, body: Data? = nil, completion: @escaping (Result<Data, FailrureResult>) -> Void) {
         guard let token = GitHubService.token else { fatalError("User doesn't logged in!") }
         
         let url = URL(string: apiURL + path)! // swiftlint:disable:this force_unwrapping
