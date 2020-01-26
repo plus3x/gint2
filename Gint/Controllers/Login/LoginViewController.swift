@@ -42,10 +42,13 @@ class LoginViewController: UIViewController {
     
     private func singIn() {
         guard let token = tokenField.text else { return }
+        guard let delegate = delegate else {
+            fatalError("Login view can't show preveous screen becouse 'delegate' are empty!")
+        }
         
         Environment.GitHub.token = token
         
-        delegate?.hideLogin()
+        delegate.hideLogin()
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {

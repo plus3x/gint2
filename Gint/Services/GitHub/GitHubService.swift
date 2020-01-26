@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum FailrureResult: Error {
+enum FailrureResult: CustomNSError {
     case invalidData
     case unknownError(error: Error)
     case badResponse

@@ -35,7 +35,12 @@ class RepositoriesViewController: UIViewController {
             switch result {
             case .success(let repositories):
                 completion(repositories)
-            case .failure: break
+            case .failure(let error):
+                switch error {
+                case .authenticationError:
+                    LoginChecker(window: UIApplication.shared.windows[0]).checkLoggedIn()
+                default: break
+                }
             }
             self.loading = false
         }
